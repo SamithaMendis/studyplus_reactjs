@@ -1,0 +1,25 @@
+{
+  "name": "studyplus-react",
+  "homepage": "https://github.com/codemaxsoftwaretimofficial/studyplus-react",
+  "authors": [
+    "CodeMaxSoftwares"
+  ],
+  "description": "A Badass Material-UI Kit based on Material Design",
+  "main": "dist/index.js",
+  "keywords": [
+    "material",
+    "design",
+    "material-ui",
+    "google",
+    "twitter"
+  ],
+  "license": "codemax software License",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "private": true
+}
