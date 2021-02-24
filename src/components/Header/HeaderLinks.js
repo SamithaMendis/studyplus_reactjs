@@ -51,7 +51,7 @@ export default function HeaderLinks(props) {
       </ListItem> */}
       <ListItem className={classes.listItem}>
         <Button
-          href="/Categories"
+          href="/categories"
           color="transparent"
           target="_blank"
           className={classes.navLink}
@@ -59,7 +59,7 @@ export default function HeaderLinks(props) {
           Categories
         </Button>
       </ListItem>
-    
+
       <ListItem className={classes.listItem}>
         <Button
           href="/topcourses"
@@ -70,7 +70,7 @@ export default function HeaderLinks(props) {
           Top Courses
         </Button>
       </ListItem>
-    
+
       <ListItem className={classes.listItem}>
         <Button
           href="/startteaching"
@@ -81,7 +81,7 @@ export default function HeaderLinks(props) {
           Start Teaching
         </Button>
       </ListItem>
-    
+
       <ListItem className={classes.listItem}>
         <Button
           href="/help"
@@ -92,11 +92,10 @@ export default function HeaderLinks(props) {
           Help
         </Button>
       </ListItem>
-    
-    
+
       <ListItem className={classes.listItem}>
         <Button
-          href="/login"
+          href="/login-page"
           color="transparent"
           target="_blank"
           className={classes.navLink_Login}
@@ -104,8 +103,7 @@ export default function HeaderLinks(props) {
           Login
         </Button>
       </ListItem>
-    
-    
+
       <ListItem className={classes.listItem}>
         <Button
           href="/signup"
@@ -116,8 +114,6 @@ export default function HeaderLinks(props) {
           Sign Up
         </Button>
       </ListItem>
-    
-    
     </List>
   );
 }

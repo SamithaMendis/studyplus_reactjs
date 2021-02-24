@@ -27,9 +27,7 @@ ReactDOM.render(
       <Route path="/checkout" component={Checkout} />
       <Route path="/course-content" component={CourseContent} />
       <Route path="/login-page" component={LoginPage} />
-      <Route path="/login-page1" component={LoginPage1} />
-      <Route path="/profile-page" component={ProfilePage} />
-      <Route path="/" component={Components} />
+      <Route path="/" component={LandingPage} />
     </Switch>
   </Router>,
   document.getElementById("root")

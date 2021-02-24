@@ -74,11 +74,12 @@ export default function SingleCourse(props) {
           <RaisedCard />
         </div>
       </div>
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
-          <CourseBody />
-          
-        </div>
+      {/* <div className={classNames(classes.main, classes.mainRaised)}>
+        <div className={classes.container}></div>
+      </div> */}
+
+      <div style={{ marginLeft: "100px", marginRight: "100px" }}>
+        <CourseBody />
       </div>
       <Footer />
     </div>

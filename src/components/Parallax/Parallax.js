@@ -14,7 +14,7 @@ const useStyles = makeStyles(styles);
 export default function Parallax(props) {
   let windowScrollTop;
   if (window.innerWidth >= 768) {
-    windowScrollTop = window.pageYOffset / 3;
+    windowScrollTop = window.pageYOffset / 10;
   } else {
     windowScrollTop = 0;
   }
@@ -32,7 +32,7 @@ export default function Parallax(props) {
     };
   });
   const resetTransform = () => {
-    var windowScrollTop = window.pageYOffset / 3;
+    var windowScrollTop = window.pageYOffset / 10;
     setTransform("translate3d(0," + windowScrollTop + "px,0)");
   };
   const { filter, className, children, style, image, small } = props;
@@ -41,7 +41,7 @@ export default function Parallax(props) {
     [classes.parallax]: true,
     [classes.filter]: filter,
     [classes.small]: small,
-    [className]: className !== undefined
+    [className]: className !== undefined,
   });
   return (
     <div
@@ -49,7 +49,7 @@ export default function Parallax(props) {
       style={{
         ...style,
         backgroundImage: "url(" + image + ")",
-        transform: transform
+        transform: transform,
       }}
     >
       {children}
@@ -63,5 +63,5 @@ Parallax.propTypes = {
   children: PropTypes.node,
   style: PropTypes.string,
   image: PropTypes.string,
-  small: PropTypes.bool
+  small: PropTypes.bool,
 };

@@ -64,10 +64,11 @@ export default function CourseContent(props) {
           <RaisedCard />
         </div>
       </div>
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
-          <CourseContentBody />
-        </div>
+      {/* <div className={classNames(classes.main, classes.mainRaised)}>
+        <div className={classes.container}></div>
+      </div> */}
+      <div style={{ marginLeft: "100px", marginRight: "100px" }}>
+        <CourseContentBody />
       </div>
       <Footer />
     </div>

@@ -51,10 +51,12 @@ export default function CategoriesPage(props) {
           </GridContainer>
         </div>
       </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
-          <CoursePills />
-        </div>
+      {/* <div className={classNames(classes.main, classes.mainRaised)}>
+        <div className={classes.container}></div>
+      </div> */}
+
+      <div style={{ marginLeft: "100px", marginRight: "100px" }}>
+        <CoursePills />
       </div>
       <Footer />
     </div>
