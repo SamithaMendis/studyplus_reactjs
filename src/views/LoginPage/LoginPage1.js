@@ -22,10 +22,14 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "assets/img/bg7.jpg";
+import { red } from "@material-ui/core/colors";
+import DeleteIcon from "@material-ui/icons/Delete";
+import { TextField } from "@material-ui/core";
 
 const useStyles = makeStyles(styles);
+const dashboardRoutes = [];
 
-export default function LoginPage1(props) {
+export default function LoginPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   setTimeout(function () {
     setCardAnimation("");
@@ -34,122 +38,66 @@ export default function LoginPage1(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Header
-        absolute
-        color="transparent"
-        brand="Study Plus"
-        rightLinks={<HeaderLinks />}
-        {...rest}
-      />
-      <div
-        className={classes.pageHeader}
-        style={{
-          backgroundImage: "url(" + image + ")",
-          backgroundSize: "cover",
-          backgroundPosition: "top center",
-        }}
-      >
-        <div className={classes.container}>
-          <GridContainer justify="center">
-            <GridItem xs={12} sm={12} md={4}>
-              <Card className={classes[cardAnimaton]}>
-                <form className={classes.form}>
-                  <CardHeader color="primary" className={classes.cardHeader}>
-                    <h4>Login</h4>
-                    <div className={classes.socialLine}>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <i className={"fab fa-twitter"} />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <i className={"fab fa-facebook"} />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        <i className={"fab fa-google-plus-g"} />
-                      </Button>
-                    </div>
-                  </CardHeader>
-                 
-                  <p className={classes.divider}>Or Be Classical</p>
-                  <CardBody>
-                    <CustomInput
-                      labelText="First Name..."
-                      id="first"
-                      formControlProps={{
-                        fullWidth: true,
-                      }}
-                      inputProps={{
-                        type: "text",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <People className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        ),
-                      }}
-                    />
-                    <CustomInput
-                      labelText="Email..."
-                      id="email"
-                      formControlProps={{
-                        fullWidth: true,
-                      }}
-                      inputProps={{
-                        type: "email",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Email className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        ),
-                      }}
-                    />
-                    <CustomInput
-                      labelText="Password"
-                      id="pass"
-                      formControlProps={{
-                        fullWidth: true,
-                      }}
-                      inputProps={{
-                        type: "password",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Icon className={classes.inputIconsColor}>
-                              lock_outline
-                            </Icon>
-                          </InputAdornment>
-                        ),
-                        autoComplete: "off",
-                      }}
-                    />
-                  </CardBody>
-                  <CardFooter className={classes.cardFooter}>
-                    <Button simple color="primary" size="lg">
-                      Get started
-                    </Button>
-                  </CardFooter>
-                </form>
-              </Card>
+      <GridContainer>
+        <GridItem
+          xs={12}
+          sm={6}
+          md={5}
+          style={{ backgroundColor: "#D1D0CE", height: "100vh" }}
+        >
+          <div className={classes.leftside}>
+            <GridContainer>
+              <GridItem xs={12} sm={12} md={12}>
+                <p className={classes.studyplus}>
+                  study<b>plus</b>
+                </p>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12}>
+                <p className={classes.left_text}>
+                  Explore the knowledge awaiting for you
+                </p>
+              </GridItem>
+            </GridContainer>
+          </div>
+        </GridItem>
+       
+        <GridItem xs={12} sm={6} md={7}>
+          <form className={classes.form}>
+            <GridItem xs={12} sm={12} md={12}>
+              <h2>Log in</h2>
+              <Button
+                variant="contained"
+                color="secondary"
+                className={classes.button1}
+                // startIcon={
+                //   <p
+                //     style={{
+                //       fontSize: "30px",
+                //       fontWeight: "bold",
+                //       marginLeft: "0",
+                //       textAlign: "left",
+                //     }}
+                //   >
+                //     G
+                //   </p>
+                // }
+              >
+                Continue with Google
+              </Button>
             </GridItem>
-          </GridContainer>
-        </div>
-        <Footer whiteFont />
-      </div>
+            <GridItem xs={12} sm={12} md={12}>
+              <TextField
+                id="outlined-helperText"
+                label="Helper text"
+                helperText="Some important text"
+                variant="outlined"
+              />
+            </GridItem>
+
+            <hr />
+          </form>
+        </GridItem>
+      </GridContainer>
     </div>
   );
 }

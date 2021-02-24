@@ -10,16 +10,16 @@ const footerStyle = {
     borderRadius: "3px",
     textDecoration: "none",
     position: "relative",
-    display: "block"
+    display: "block",
   },
   left: {
     float: "left!important",
-    display: "block"
+    display: "block",
   },
   right: {
     padding: "15px 0",
     margin: "0",
-    float: "right!important"
+    float: "right!important",
   },
   footer: {
     padding: "0.9375rem 0",
@@ -29,34 +29,41 @@ const footerStyle = {
     position: "relative",
     backgroundColor: "white",
     color: "white",
-
   },
   a: {
     color: primaryColor,
     textDecoration: "none",
-    backgroundColor: "transparent"
+    backgroundColor: "transparent",
   },
   footerWhiteFont: {
     "&,&:hover,&:focus": {
-      color: "#FFFFFF"
-    }
+      color: "#FFFFFF",
+    },
   },
   container,
   list: {
     marginBottom: "0",
     padding: "0",
-    marginTop: "0"
+    marginTop: "0",
   },
   inlineBlock: {
     display: "inline-block",
     padding: "0px",
-    width: "auto"
+    width: "auto",
   },
   icon: {
     width: "18px",
     height: "18px",
     position: "relative",
-    top: "3px"
-  }
+    top: "3px",
+  },
+
+  studyplustext: {
+    fontSize: "40px",
+  },
+  navtext: {
+    fontSize: "18px",
+    // // fontWeight: "bold",
+  },
 };
 export default footerStyle;

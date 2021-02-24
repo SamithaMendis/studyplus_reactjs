@@ -24,6 +24,7 @@ import { Button, Card } from "@material-ui/core";
 import team1 from "assets/img/faces/card-profile1-square.jpg";
 import img1 from "assets/img/bg2.jpg";
 import image from "assets/img/faces/avatar.jpg";
+import ReactStars from "react-rating-stars-component";
 
 const useStyles = makeStyles(styles);
 
@@ -34,5 +35,39 @@ export default function StudentReviews() {
     classes.imgRoundedCircle,
     classes.imgFluid
   );
-  return <div></div>;
+  return (
+    <div>
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={1}>
+          <GridContainer>
+            <img
+              src={image}
+              alt="..."
+              style={{ width: "80px" }}
+              className={classes.imgRoundedCircle + " " + classes.imgFluid}
+            />
+          </GridContainer>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={8}>
+          <GridContainer>
+            <GridItem xs={12} sm={12} md={12}>
+              <p className={classes.reviewname}>Cameron Williamson</p>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+              <ReactStars />
+            </GridItem>
+            <GridItem xs={12} sm={12} md={12}>
+              <p className={classes.reviewtext}>
+                Lorem ipsum, or lipsum as it is sometimes known, is dummy text
+                used in laying out print, graphic or web designs. The passage is
+                attributed to an unknown typesetter in the 15th century who is
+                thought to have scrambled parts of Cicero's De Finibus Bonorum
+                et Malorum for use in a type specimen book.
+              </p>
+            </GridItem>
+          </GridContainer>
+        </GridItem>
+      </GridContainer>
+    </div>
+  );
 }

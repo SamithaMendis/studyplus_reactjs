@@ -63,7 +63,6 @@ export default function SingleCourse(props) {
             </GridItem>
           </GridContainer>
         </div>
-    
       </Parallax>
       <div
         className={classNames(
@@ -78,6 +77,7 @@ export default function SingleCourse(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <CourseBody />
+          
         </div>
       </div>
       <Footer />

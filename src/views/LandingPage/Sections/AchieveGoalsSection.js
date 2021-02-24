@@ -16,10 +16,8 @@ import CardFooter from "components/Card/CardFooter.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/popularStyle.js";
 
-import team1 from "assets/img/faces/avatar.jpg";
+import img1 from "assets/img/study1.png";
 import team2 from "assets/img/faces/christian.jpg";
-import team3 from "assets/img/faces/kendall.jpg";
-import { LibraryBooks } from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 
@@ -39,91 +37,87 @@ export default function AchieveGoalsSection() {
       <br />
       <div>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={6}></GridItem>
           <GridItem xs={12} sm={12} md={6}>
             <GridContainer>
-              <GridItem xs={2} sm={2} md={2}>
-                <p className={classes.achievegoalListText1}>01</p>
+              <GridItem xs={12} sm={12} md={12}>
+                <img src={img1} alt="..." style={{ width: "100%" }} />
               </GridItem>
-              <GridItem xs={10} sm={10} md={10}>
-                <p className={classes.achievegoalListText1}>Discover</p>
+            </GridContainer>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={6}>
+            <GridContainer>
+              <GridItem xs={12} sm={12} md={12}>
+                <GridContainer>
+                  <GridItem xs={2} sm={2} md={2}>
+                    <p className={classes.achievegoalListText1}>01</p>
+                  </GridItem>
+                  <GridItem xs={10} sm={10} md={10}>
+                    <p className={classes.achievegoalListText1}>Discover</p>
+                  </GridItem>
+                </GridContainer>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12}>
+                <GridContainer>
+                  <GridItem xs={2} sm={2} md={2}></GridItem>
+                  <GridItem xs={10} sm={10} md={10}>
+                    <p className={classes.achievegoalListText2}>
+                      Discover what you love. what you are passionate about.
+                      Thousands of skills to choose choose from. And start
+                      building your wonderful skills.
+                    </p>
+                  </GridItem>
+                </GridContainer>
+              </GridItem>
+              <br />
+              <GridItem xs={12} sm={12} md={12}>
+                <GridContainer>
+                  <GridItem xs={2} sm={2} md={2}>
+                    <p className={classes.achievegoalListText1}>02</p>
+                  </GridItem>
+                  <GridItem xs={10} sm={10} md={10}>
+                    <p className={classes.achievegoalListText1}>Learn</p>
+                  </GridItem>
+                </GridContainer>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12}>
+                <GridContainer>
+                  <GridItem xs={2} sm={2} md={2}></GridItem>
+                  <GridItem xs={10} sm={10} md={10}>
+                    <p className={classes.achievegoalListText2}>
+                      Learn from the best. No more time wasting . Enhance your
+                      knowledge and learn something new, everyday. Become a new
+                      person.
+                    </p>
+                  </GridItem>
+                </GridContainer>
+              </GridItem>
+              <br />
+              <GridItem xs={12} sm={12} md={12}>
+                <GridContainer>
+                  <GridItem xs={2} sm={2} md={2}>
+                    <p className={classes.achievegoalListText1}>03</p>
+                  </GridItem>
+                  <GridItem xs={10} sm={10} md={10}>
+                    <p className={classes.achievegoalListText1}>Experience</p>
+                  </GridItem>
+                </GridContainer>
+              </GridItem>
+              <GridItem xs={12} sm={12} md={12}>
+                <GridContainer>
+                  <GridItem xs={2} sm={2} md={2}></GridItem>
+                  <GridItem xs={10} sm={10} md={10}>
+                    <p className={classes.achievegoalListText2}>
+                      Experience the difference. Feel what you love and enjoy
+                      your education. No more boring school like education. Get
+                      exited and start learning today
+                    </p>
+                  </GridItem>
+                </GridContainer>
               </GridItem>
             </GridContainer>
           </GridItem>
         </GridContainer>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={6}></GridItem>
-          <GridItem xs={12} sm={12} md={6}>
-            <GridContainer>
-              <GridItem xs={2} sm={2} md={2}></GridItem>
-              <GridItem xs={10} sm={10} md={10}>
-                <p className={classes.achievegoalListText2}>
-                  Discover what you love. what you are passionate about.
-                  Thousands of skills to choose choose from. And start building
-                  your wonderful skills.
-                </p>
-              </GridItem>
-            </GridContainer>
-          </GridItem>
-        </GridContainer>
-        <br />
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={6}></GridItem>
-          <GridItem xs={12} sm={12} md={6}>
-            <GridContainer>
-              <GridItem xs={2} sm={2} md={2}>
-                <p className={classes.achievegoalListText1}>02</p>
-              </GridItem>
-              <GridItem xs={10} sm={10} md={10}>
-                <p className={classes.achievegoalListText1}>Learn</p>
-              </GridItem>
-            </GridContainer>
-          </GridItem>
-        </GridContainer>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={6}></GridItem>
-          <GridItem xs={12} sm={12} md={6}>
-            <GridContainer>
-              <GridItem xs={2} sm={2} md={2}></GridItem>
-              <GridItem xs={10} sm={10} md={10}>
-                <p className={classes.achievegoalListText2}>
-                  Learn from the best. No more time wasting . Enhance your
-                  knowledge and learn something new, everyday. Become a new
-                  person.
-                </p>
-              </GridItem>
-            </GridContainer>
-          </GridItem>
-        </GridContainer>
-        <br />
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={6}></GridItem>
-          <GridItem xs={12} sm={12} md={6}>
-            <GridContainer>
-              <GridItem xs={2} sm={2} md={2}>
-                <p className={classes.achievegoalListText1}>03</p>
-              </GridItem>
-              <GridItem xs={10} sm={10} md={10}>
-                <p className={classes.achievegoalListText1}>Experience</p>
-              </GridItem>
-            </GridContainer>
-          </GridItem>
-        </GridContainer>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={6}></GridItem>
-          <GridItem xs={12} sm={12} md={6}>
-            <GridContainer>
-              <GridItem xs={2} sm={2} md={2}></GridItem>
-              <GridItem xs={10} sm={10} md={10}>
-                <p className={classes.achievegoalListText2}>
-                  Experience the difference. Feel what you love and enjoy your
-                  education. No more boring school like education. Get exited
-                  and start learning today
-                </p>
-              </GridItem>
-            </GridContainer>
-          </GridItem>
-        </GridContainer>
+
         <br />
       </div>
 

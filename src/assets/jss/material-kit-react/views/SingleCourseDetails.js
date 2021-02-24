@@ -135,6 +135,15 @@ const popularStyle = {
     color: "blue",
     fontSize: "16px",
   },
+  reviewname: {
+    color: "black",
+    fontWeight: "bold",
+    fontSize: "20px",
+  },
+  reviewtext: {
+    color: "black",
+    fontSize: "16px",
+  },
 };
 
 export default popularStyle;

@@ -84,25 +84,13 @@ export default function OrderSummary() {
         </GridItem>
       </GridContainer>
       <br />
-      <GridContainer style={{ marginLeft: "20px" }}>
+      <GridContainer style={{ marginLeft: "-20px" }}>
         <GridItem xs={12} sm={12} md={12}>
           <Button color="primary" block className={classes.buynowbtn}>
             Complete payment
           </Button>
         </GridItem>
       </GridContainer>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br /> <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <br />
       <br />
     </div>

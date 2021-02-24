@@ -25,10 +25,56 @@ import team1 from "assets/img/faces/card-profile1-square.jpg";
 import img1 from "assets/img/bg2.jpg";
 import image from "assets/img/faces/avatar.jpg";
 
+import PropTypes from "prop-types";
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
+
 const useStyles = makeStyles(styles);
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
 
 export default function CourseContentBody() {
   const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   const imageClasses = classNames(
     classes.imgRaised,
     classes.imgRoundedCircle,
@@ -70,210 +116,81 @@ export default function CourseContentBody() {
           </GridItem>
         </GridContainer>
       </div>
-
       <br />
       <br />
 
-      <div>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={10}>
-            <GridItem xs={12} sm={12} md={12}>
-              <h2 className={classes.h3text}>What you will learn</h2>
-            </GridItem>
-          </GridItem>
-        </GridContainer>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-            <GridContainer>
-              <GridItem xs={12} sm={1} md={1}>
-                <input type="checkbox" value="Male" name="gender" />
-              </GridItem>
-              <GridItem xs={12} sm={11} md={11}>
-                <p className={classes.ptext}>
-                  How to configure a basic backend server
-                </p>
-              </GridItem>
-            </GridContainer>
-          </GridItem>
-        </GridContainer>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-            <GridContainer>
-              <GridItem xs={12} sm={1} md={1}>
-                <input type="checkbox" value="Male" name="gender" />
-              </GridItem>
-              <GridItem xs={12} sm={11} md={11}>
-                <p className={classes.ptext}>
-                  Build a RESTFUL API with expressJS
-                </p>
-              </GridItem>
-            </GridContainer>
-          </GridItem>
-        </GridContainer>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-            <GridContainer>
-              <GridItem xs={12} sm={1} md={1}>
-                <input type="checkbox" value="Male" name="gender" />
-              </GridItem>
-              <GridItem xs={12} sm={11} md={11}>
-                <p className={classes.ptext}>Configure routes</p>
-              </GridItem>
-            </GridContainer>
-          </GridItem>
-        </GridContainer>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-            <GridContainer>
-              <GridItem xs={12} sm={1} md={1}>
-                <input type="checkbox" value="Male" name="gender" />
-              </GridItem>
-              <GridItem xs={12} sm={11} md={11}>
-                <p className={classes.ptext}>Set up controllers</p>
-              </GridItem>
-            </GridContainer>
-          </GridItem>
-        </GridContainer>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-            <GridContainer>
-              <GridItem xs={12} sm={1} md={1}>
-                <input type="checkbox" value="Male" name="gender" />
-              </GridItem>
-              <GridItem xs={12} sm={11} md={11}>
-                <p className={classes.ptext}>Work with middleware</p>
-              </GridItem>
-            </GridContainer>
-          </GridItem>
-        </GridContainer>
-      </div>
-      <br />
-      <br />
-
-      <div>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={10}>
-            <GridItem xs={12} sm={12} md={12}>
-              <h2 className={classes.h3text}>Course content</h2>
-            </GridItem>
-          </GridItem>
-        </GridContainer>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-            <GridContainer>
-              <GridItem xs={12} sm={1} md={1}>
-                <input type="checkbox" value="Male" name="gender" />
-              </GridItem>
-              <GridItem xs={12} sm={11} md={11}>
-                <p className={classes.ptext}>
-                  How to configure a basic backend server
-                </p>
-              </GridItem>
-            </GridContainer>
-          </GridItem>
-        </GridContainer>
-      </div>
-      <br />
-      <br />
-
-      <div>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={10}>
-            <GridItem xs={12} sm={12} md={12}>
-              <h2 className={classes.h3text}>Requirement</h2>
-            </GridItem>
-          </GridItem>
-        </GridContainer>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-            <GridContainer>
-              <GridItem xs={12} sm={1} md={1}>
-                <input type="checkbox" value="Male" name="gender" />
-              </GridItem>
-              <GridItem xs={12} sm={11} md={11}>
-                <p className={classes.ptext}>Basic Javascript knowledge</p>
-              </GridItem>
-            </GridContainer>
-          </GridItem>
-        </GridContainer>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-            <GridContainer>
-              <GridItem xs={12} sm={1} md={1}>
-                <input type="checkbox" value="Male" name="gender" />
-              </GridItem>
-              <GridItem xs={12} sm={11} md={11}>
-                <p className={classes.ptext}>
-                  Computer with an internet connection
-                </p>
-              </GridItem>
-            </GridContainer>
-          </GridItem>
-        </GridContainer>
-      </div>
-      <br />
-      <br />
-
-      <div>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={10}>
-            <GridItem xs={12} sm={12} md={12}>
-              <h2 className={classes.h3text}>Frequently bought together</h2>
-            </GridItem>
-          </GridItem>
-        </GridContainer>
+      <div className={classes.root}>
+        <AppBar
+          position="static"
+          style={{ backgroundColor: "white", color: "black" }}
+        >
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="simple tabs example"
+          >
+            <Tab label="Overview" {...a11yProps(0)} />
+            <Tab label="Reviews" {...a11yProps(1)} />
+            <Tab label="Q and A" {...a11yProps(2)} />
+            <Tab label="Downloads" {...a11yProps(3)} />
+          </Tabs>
+        </AppBar>
+        <TabPanel
+          value={value}
+          index={0}
+          style={{ backgroundColor: "white", color: "black" }}
+        >
+          <h3>About the course</h3>
+          <br />
+          <p className={classes.ptext}>
+            Have you tried to learn Node before? You start a new course, and the
+            instructor has you installng a bunch of libraries before you even
+            know what Node is or how it works. You eventually get stuck and
+            reach out to the instructor, but you get no reply. you then clocse
+            the course and never open it again.
+          </p>
+        </TabPanel>
+        <TabPanel
+          value={value}
+          index={1}
+          style={{ backgroundColor: "white", color: "black" }}
+        >
+          <h3>Reviews</h3>
+          <br />
+          <p className={classes.ptext}>
+            Have you tried to learn Node before? You start a new course, and the
+            instructor has you installng a bunch of libraries before you even
+            know what Node is or how it works. You eventually get stuck and
+            reach out to the instructor, but you get no reply. you then clocse
+            the course and never open it again.
+          </p>
+        </TabPanel>
+        <TabPanel
+          value={value}
+          index={2}
+          style={{ backgroundColor: "white", color: "black" }}
+        >
+          <h3>Q and A</h3>
+          <br />
+          <p className={classes.ptext}>
+            Have you tried to learn Node before? You start a new course, and the
+            instructor has you installng a bunch of libraries before you even
+            know what Node is or how it works. You eventually get stuck and
+            reach out to the instructor, but you get no reply. you then clocse
+            the course and never open it again.
+          </p>
+        </TabPanel>
+        <TabPanel
+          value={value}
+          index={3}
+          style={{ backgroundColor: "white", color: "black" }}
+        >
+          <h3>Downloads</h3>
+          <br />
+        </TabPanel>
       </div>
 
       <br />
-      <br />
-
-      <div>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={10}>
-            <h2 className={classes.h3text}>Instructor</h2>
-          </GridItem>
-        </GridContainer>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={10}>
-            <p className={classes.instructorName}>Dianne Russel</p>
-          </GridItem>
-        </GridContainer>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={10}>
-            <p className={classes.h4text}>
-              I am your web developer instructor!!!
-            </p>
-          </GridItem>
-        </GridContainer>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={6}>
-            <p className={classes.ptext}>
-              Instructor. Instructor is the title for an individual responsible
-              for teaching students in a particular subject area. Instructors
-              teach courses in their area of expertise
-            </p>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={6} className={classes.marginLeft}>
-            <img
-              src={image}
-              alt="..."
-              style={{ width: "200px", marginTop: "-100px" }}
-              className={classes.imgRoundedCircle + " " + classes.imgFluid}
-            />
-          </GridItem>
-        </GridContainer>
-
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={10}>
-            <p className={classes.ptext} style={{ fontWeight: "bold" }}>
-              2655266 students | 21 courses
-            </p>
-          </GridItem>
-        </GridContainer>
-      </div>
-      <br />
-      <br />
-
       <br />
     </div>
   );

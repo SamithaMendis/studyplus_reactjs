@@ -42,15 +42,18 @@ export default function Checkout(props) {
         }}
         {...rest}
       />
-      <Parallax filter image={require("assets/img/bg7.jpg")}>
+      <div style={{ backgroundColor: "gray", height: "500px" }}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={8}>
-              <h1 className={classes.title}>Chekcout</h1>
+              <div style={{ height: "200px" }}></div>
+              <h1 className={classes.title}>
+                API Masterclass with NodeJS + expressJS
+              </h1>
             </GridItem>
           </GridContainer>
         </div>
-      </Parallax>
+      </div>
       <div
         className={classNames(
           classes.courseContentSideMenu,
@@ -61,10 +64,9 @@ export default function Checkout(props) {
           <OrderSummary />
         </div>
       </div>
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
-          <Payment />
-        </div>
+
+      <div style={{ marginLeft: "100px" }}>
+        <Payment />
       </div>
       <Footer />
     </div>

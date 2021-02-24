@@ -30,6 +30,7 @@ import team1 from "assets/img/faces/card-profile1-square.jpg";
 import img1 from "assets/img/bg2.jpg";
 import image from "assets/img/faces/avatar.jpg";
 import ReactStars from "react-rating-stars-component";
+import StudentReviews from "views/SingleCourse/Sections/StudentReviews";
 
 const useStyles = makeStyles(styles);
 
@@ -470,7 +471,20 @@ export default function CourseBody() {
       </div>
       <br />
       <br />
+      <br />
+      <br />
+      <br />
+      <br />
 
+      <h2 className={classes.h3text}>Student Reviews</h2>
+      <br />
+      <StudentReviews />
+      <br />
+      <StudentReviews />
+      <br />
+      <StudentReviews />
+      <br />
+      <StudentReviews />
       <br />
     </div>
   );
